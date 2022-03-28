@@ -12,10 +12,12 @@
 * Javascript
 * Mongoose
 * Express
+* Trello
+* Figma
+* Lucid
 ***
 ### ***Front End***
-#### Trevor Bond - Tylus Dawkins
-[Front End Trello](https://trello.com/b/rtxEhZqg/jurassic-park-front-end)
+#### Trevor Bond
 - [] Landing page
     - [] Nav
 - [] Wine entry form
@@ -48,12 +50,12 @@
     - [] guests
 
 #### ***References***
-[Back End Trello](https://trello.com/b/kBzgQtmI/p2-wine-cellar)    
+[Trello](https://trello.com/b/kBzgQtmI/p2-wine-cellar)    
 
 ### 
 [ERD](https://lucid.app/lucidchart/12d6a6be-c6d5-427a-b971-bad62a343494/edit?invitationId=inv_8b393d44-1475-4d38-bcc7-896248f087de)
 
-[Wireframe]()
+[Wireframe](https://www.figma.com/file/qXUumOnde5vpMNbBv41MvU/P2---Wine-Cellar?node-id=2%3A40)
 *Future Updates***
 ***
 ### ***Credits***
