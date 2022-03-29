@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const Spirit = new Schema(
   {
+    cellar: { type: String, required: true},
     producer: { type: String, required: true },
     name: { type: String, required: true },
     subname: { type: String, required: false },

@@ -1,10 +1,13 @@
 const db = require("../db");
 const Wine = require("../models/wine");
-
+const Cellar = require("../models/cellar")
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
+
 const main = async () => {
+  const myFirstCellar = await Cellar.find({ name: 'My First Cellar'})
+
   const wines = [
     {
       producer: "Perrier Jouet",
@@ -19,6 +22,7 @@ const main = async () => {
       description: "",
       notes: "",
       image: "",
+      cellar: myFirstCellar[0]._id
     },
     {
       producer: "Marchesi Antinori",
@@ -33,6 +37,7 @@ const main = async () => {
       description: "",
       notes: "",
       image: "",
+      cellar: myFirstCellar[0]._id
     },
   ];
 
