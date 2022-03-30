@@ -22,6 +22,7 @@ const main = async () => {
       description: "",
       notes: "",
       image: "",
+      remaining: 0,
       cellar: myFirstCellar[0]._id
     },
     {
@@ -37,6 +38,7 @@ const main = async () => {
       description: "",
       notes: "",
       image: "",
+      remaining: 0,
       cellar: myFirstCellar[0]._id
     },
   ];

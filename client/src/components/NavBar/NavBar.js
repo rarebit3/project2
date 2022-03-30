@@ -24,8 +24,8 @@ const Navbar = () => {
         <Link className="iLinks" to="/cellar">
           My Cellar
         </Link>
-        <Link className="iLinks" to="/addbottle">
-          Add Bottles
+        <Link className="iLinks" to="/addwine">
+          Add Wine
         </Link>
         <p className="iLinks" onClick={() => navigate(-1)}>
           Back

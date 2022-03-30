@@ -1,46 +1,69 @@
-import React from "react";
-import axios from 'axios'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
+const AddWine = () => {
+  const [newWine, setNewWine] = useState({
+    producer: "",
+    cuvee: "",
+    vintage: "",
+    region: "",
+    subr: "",
+    bottles: "",
+  });
 
-const AddWine= (props) => {
-  const handleSubmit = (e) => {
-    props.addUser(e);
+  const formUpdate = (e) => {
+    setNewWine({ ...newWine, [e.target.name]: e.target.value });
   };
 
-  
-  const newUser = props.newUser;
+  const handleSubmit = () => {
+    console.log(newWine)
+  };
 
   return (
     <div>
-      <h1 className="bodytitle">Join our newsletter for deals on airfare, lodging, and tickets!</h1>
+      <h1 className="bodytitle">Add wine to the cellar.</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          value={newUser.firstName}
-          onChange={props.handleChange}
-          name={"firstName"}
-          placeholder={"First Name"}
+          value={newWine.producer}
+          onChange={formUpdate}
+          name={"producer"}
+          placeholder={"Producer"}
         />
         <input
           type="text"
-          value={newUser.lastName}
-          onChange={props.handleChange}
-          name={"lastName"}
-          placeholder={"Last Name"}
+          value={newWine.cuvee}
+          onChange={formUpdate}
+          name={"cuvee"}
+          placeholder={"Cuvee or Name"}
         />
         <input
           type="text"
-          value={newUser.email}
-          onChange={props.handleChange}
-          name={"email"}
-          placeholder={"Email"}
+          value={newWine.vintage}
+          onChange={formUpdate}
+          name={"vintage"}
+          placeholder={"Vintage"}
         />
         <input
           type="text"
-          value={newUser.age}
-          onChange={props.handleChange}
-          name={"age"}
-          placeholder={"Age"}
+          value={newWine.region}
+          onChange={formUpdate}
+          name={"region"}
+          placeholder={"Region"}
+        />
+        <input
+          type="text"
+          value={newWine.subr}
+          onChange={formUpdate}
+          name={"subregion"}
+          placeholder={"Sub Region"}
+        />
+        <input
+          type="text"
+          value={newWine.bottles}
+          onChange={formUpdate}
+          name={"bottles"}
+          placeholder={"How many bottles are you adding?"}
         />
         <button>Submit</button>
       </form>
