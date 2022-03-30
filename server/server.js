@@ -2,9 +2,10 @@ const express = require('express');
 const routes = require('./routes');
 const db = require('./db');
 const bodyParser = require('body-parser');
-const cors = require("morgan");
+const cors = require("cors");
 const mongoose = require('mongoose');
 const { MongoClient } = require('mongodb');
+// require('dotenv').config({ path: 'config.env'})
 
 
 

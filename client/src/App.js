@@ -6,19 +6,19 @@ import axios from 'axios'
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home'
 import Cellar from './components/Cellar'
-import BottleDetails from './components/BottleDetails';
+import WineDetails from './components/WineDetails';
 
 function App() {
 
 
-  const [bottles, setBottles] = useState()
+  const [wines, setWines] = useState()
   
-  const getBottles = async() => {
-    const bottleList = await axios.get('http://localhost:3001')
-    setBottles(bottleList.data.bottles)
+  const getWines = async() => {
+    const wineList = await axios.get('http://localhost:3001/wines')
+    setWines(wineList.data.wines)
   }
   useEffect(() =>{
-    getBottles()
+    getWines()
   },[])
 
   return (
@@ -27,9 +27,9 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={ <Home />} />
-          {/* <Route path='/' element={ <AddBottle />} /> */}
+          {/* <Route path='/' element={ <AddWine />} /> */}
           <Route path='/cellar' element={ <Cellar />} />
-          <Route path='/cellar/:id' element={ <BottleDetails bottles={bottles} getBottles={getBottles} />} />
+          <Route path='/cellar/:id' element={ <WineDetails wines={wines} getWines={getWines} />} />
           {/* <Route path='/' element={ <Login />} /> */}
         </Routes>
       </main>
