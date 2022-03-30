@@ -2,7 +2,7 @@ const Cellar = require('../models/cellar');
 const Wine = require('../models/wine');
 const Spirit = require('../models/spirit');
 const User = require('../models/user');
-const UserInfo = require('../models/userinfo');
+// const UserInfo = require('../models/userinfo');
 
 const getAllWines = async (req, res) => {
     try {
@@ -84,17 +84,17 @@ const createUser = async (req, res) => {
     }
 }
 
-const createUserInfo = async (req, res) => {
-    try {
-        const userInfo = await new UserInfo(req.body)
-        await userInfo.save()
-        return res.status(201).json({
-            userInfo,
-        });
-    } catch (error) {
-        return res.status(500).json({ error: error.message })
-    }
-}
+// const createUserInfo = async (req, res) => {
+//     try {
+//         const userInfo = await new UserInfo(req.body)
+//         await userInfo.save()
+//         return res.status(201).json({
+//             userInfo,
+//         });
+//     } catch (error) {
+//         return res.status(500).json({ error: error.message })
+//     }
+// }
 
 const createCellar = async (req, res) => {
     try {
@@ -117,5 +117,5 @@ module.exports = {
     getAllWines,
     getSpiritById,
     getWineById,
-    createUserInfo
+    // createUserInfo
 }

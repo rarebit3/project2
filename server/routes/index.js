@@ -10,7 +10,7 @@ router.post("/newspirit", controllers.createSpirit);
 
 router.post("/newuser", controllers.createUser);
 
-router.post("/userinfo", controllers.createUserInfo);
+// router.post("/userinfo", controllers.createUserInfo);
 
 router.post("/newwine", controllers.createWine);
 
