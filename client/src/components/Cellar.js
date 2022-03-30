@@ -12,7 +12,7 @@ const Cellar = () => {
     const [bottles, setBottles] = useState([])
     
     const getBottles = async() => {
-      const bottleList = await axios.get('http://localhost:3001/api')
+      const bottleList = await axios.get('http://localhost:3001/')
       setBottles(bottleList.data.wines)
       console.log(bottles)
     }

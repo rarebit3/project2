@@ -29,7 +29,7 @@ const getWineById = async (req, res) => {
         if (wine) {
             return res.status(200).json({ wine });
         }
-        return res.status(404).send('dino with the specified ID does not exists');
+        return res.status(404).send('wine with the specified ID does not exists');
     } catch (error) {
         return res.status(500).send(error.message);
     }
@@ -42,7 +42,7 @@ const getSpiritById = async (req, res) => {
         if (spirit) {
             return res.status(200).json({ spirit });
         }
-        return res.status(404).send('dino with the specified ID does not exists');
+        return res.status(404).send('spirit with the specified ID does not exists');
     } catch (error) {
         return res.status(500).send(error.message);
     }
