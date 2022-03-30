@@ -84,6 +84,18 @@ const createUser = async (req, res) => {
     }
 }
 
+const createUserInfo = async (req, res) => {
+    try {
+        const userInfo = await new UserInfo(req.body)
+        await userInfo.save()
+        return res.status(201).json({
+            userInfo,
+        });
+    } catch (error) {
+        return res.status(500).json({ error: error.message })
+    }
+}
+
 const createCellar = async (req, res) => {
     try {
         const cellar = await new Cellar(req.body)
@@ -96,7 +108,7 @@ const createCellar = async (req, res) => {
     }
 }
 
-module.export = {
+module.exports = {
     createCellar,
     createSpirit,
     createUser,
@@ -104,5 +116,6 @@ module.export = {
     getAllSpirits,
     getAllWines,
     getSpiritById,
-    getWineById
+    getWineById,
+    createUserInfo
 }
