@@ -6,20 +6,12 @@ import axios from 'axios'
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home'
 import Cellar from './components/Cellar'
-import WineDetails from './components/WineDetails';
+import AddWine from './components/AddWine';
 
 function App() {
 
 
-  const [wines, setWines] = useState()
   
-  const getWines = async() => {
-    const wineList = await axios.get('http://localhost:3001/wines')
-    setWines(wineList.data.wines)
-  }
-  useEffect(() =>{
-    getWines()
-  },[])
 
   return (
     <div className="App">
@@ -27,9 +19,8 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={ <Home />} />
-          {/* <Route path='/' element={ <AddWine />} /> */}
+          <Route path='/addwine' element={ <AddWine />} />
           <Route path='/cellar' element={ <Cellar />} />
-          <Route path='/cellar/:id' element={ <WineDetails wines={wines} getWines={getWines} />} />
           {/* <Route path='/' element={ <Login />} /> */}
         </Routes>
       </main>

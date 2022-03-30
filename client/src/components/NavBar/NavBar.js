@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="Navbar">
-      <h1 className="cellar-icon">
+      <h1 className="cellar-icon" onClick={() => navigate("/")}>
         Cellar<i className="fa-solid fa-wine-bottle"></i>
       </h1>
       <div
@@ -21,18 +21,15 @@ const Navbar = () => {
         <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
       </div>
       <ul className={clicked ? "nav-menu active" : "nav-menu"}>
-        <Link className="iLinks" to="/">
-          Home
+        <Link className="iLinks" to="/cellar">
+          My Cellar
         </Link>
         <Link className="iLinks" to="/addbottle">
           Add Bottles
         </Link>
-        <Link className="iLinks" to="/cellar">
-          My Cellar
-        </Link>
-        <Link className="iLinks" to={() => navigate(-1)}>
+        <p className="iLinks" onClick={() => navigate(-1)}>
           Back
-        </Link>
+        </p>
         <Link className="iLinks login" to="/login">
           Log In
         </Link>
