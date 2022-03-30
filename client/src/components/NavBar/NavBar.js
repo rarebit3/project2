@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useEffect } from 'react'
 import { Link, useNavigate } from "react-router-dom";
 import './Navbar.css'
-import Button from '../Button'
 
 const Navbar = () => {
   let navigate = useNavigate();
@@ -28,9 +27,9 @@ const Navbar = () => {
         <Link className="iLinks" to={() => navigate(-1)}>
           Back
         </Link>
-        <Button className="iLinksLogin" >Log In</Button>
-      </ul>
-      
+        <Link className="iLinks login" to='/login'>Log In</Link>
+        </ul>
+
     </nav>
   );
 };
