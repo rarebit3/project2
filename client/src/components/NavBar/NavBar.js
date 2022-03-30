@@ -1,30 +1,38 @@
 import React from "react";
+import { useState, useEffect } from 'react'
 import { Link, useNavigate } from "react-router-dom";
+import './Navbar.css'
+import Button from '../Button'
 
-const NavBar = () => {
+const Navbar = () => {
   let navigate = useNavigate();
+  const [clicked, setClicked] = useState(false)
+
 
   return (
-    <nav className="navlist">
-      <h1 className="cellar-icon">Cellar</h1>
-      <div className="menu-icon"></div>
-      <ul>
-        <Link className="btn" to="/">
+    <nav className="Navbar">
+      <h1 className="cellar-icon">Cellar<i className="fa-solid fa-wine-bottle"></i></h1>
+      <div className="menu-icon" onClick={() => {setClicked(!clicked)}} >
+        <i className={clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+      </div>
+      <ul className={clicked ? 'nav-menu active' : 'nav-menu'}>
+        <Link className="iLinks" to="/">
           Home
         </Link>
-        <Link className="btn" to="/addbottle">
+        <Link className="iLinks" to="/addbottle">
           Add Bottles
         </Link>
-        <Link className="btn" to="/cellar">
+        <Link className="iLinks" to="/cellar">
           My Cellar
         </Link>
-        <Link className="btn" to={() => navigate(-1)}>
+        <Link className="iLinks" to={() => navigate(-1)}>
           Back
         </Link>
+        <Button className="iLinksLogin" >Log In</Button>
       </ul>
-      <p>Welcome to Cellar! What would you like to do?</p>
+      
     </nav>
   );
 };
 
-export default NavBar;
+export default Navbar;

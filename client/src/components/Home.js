@@ -5,7 +5,7 @@ const Home = () => {
 
     return (
         <div>
-        Welcome to Cellar. would you like to go to your cellars?
+        <p>Welcome to Cellar! What would you like to do?</p>
         </div>
     )
 }
