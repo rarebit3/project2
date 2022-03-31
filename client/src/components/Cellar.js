@@ -4,8 +4,9 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Cellar = () => {
+  // GLOBALS AND STATE
   let navigate = useNavigate()
-
+  
   const [wines, setWines] = useState([]);
 
   const getWines = async () => {
@@ -15,14 +16,21 @@ const Cellar = () => {
   useEffect(() => {
     getWines();
   }, []);
+
+  let positiveBottles = wines.filter((wine) => 
+  (wine.bottles > 0))
   
+  //ON CLICKS
   const drinkBottle = async (wine) => {
-    
     wine.tasted = true
     wine.bottles -= 1
     console.log(wine)
     await axios.post("http://localhost:3001/updatewine", wine)
     navigate("/cellar")
+  }
+  const removeWine = async (wine) => {
+    await axios.delete(`http://localhost:3001/removewine/${wine._id}`)
+    getWines()
   }
 
 
@@ -31,7 +39,7 @@ const Cellar = () => {
   } else  {
     return (
       <div className="wine-grid">
-        {wines.map((wine, id) => (
+        {positiveBottles.map((wine, id) => (
           <div className="wine-card" key={id}>
             <h2>{wine.name}</h2>
             <h3>Producer: {wine.producer}</h3>
@@ -47,6 +55,7 @@ const Cellar = () => {
             <h3>Bottles Remaining in Cellar: {wine.bottles}{
             wine.bottles > 0 && <button onClick={() => drinkBottle(wine)}>Drink me</button>
             }</h3>
+            <button onClick={() => (wine)}>Remove Wine</button>
           </div>
         ))}
       </div>

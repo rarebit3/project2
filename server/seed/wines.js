@@ -22,7 +22,7 @@ const main = async () => {
       description: "",
       notes: "",
       image: "",
-      bottles: 1,
+      bottles: 6,
       cellar: myFirstCellar[0]._id
     },
     {
