@@ -22,4 +22,6 @@ router.get("/spirit/:id", controllers.getSpiritById);
 
 router.get("/wine/:id", controllers.getWineById);
 
+router.post("/updatewine", controllers.updateWine)
+
 module.exports = router;

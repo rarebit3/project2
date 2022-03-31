@@ -16,12 +16,10 @@ const AddWine = () => {
 
   const formUpdate = (e) => {
     setNewWine({ ...newWine, [e.target.name]: e.target.value });
-    console.log(newWine)
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-
     await axios.post('http://localhost:3001/newwine', newWine)
   };
 
@@ -73,7 +71,6 @@ const AddWine = () => {
         />
         <button>Submit</button>
       </form>
-      <button onClick={console.log()}>whats the data</button>
     </div>
   );
 };

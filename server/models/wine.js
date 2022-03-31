@@ -16,7 +16,7 @@ const Wine = new Schema(
     description: { type: String, required: false },
     notes: { type: String, required: false },
     image: { type: String, required: false },
-    bottles: {type: String, required: true}
+    bottles: {type: Number, required: true}
   },
   { timestamps: true }
 );
