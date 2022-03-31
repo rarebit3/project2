@@ -50,11 +50,15 @@ const getSpiritById = async (req, res) => {
 
 const createWine = async (req, res) => {
     try {
+        
         const wine = await new Wine(req.body)
         await wine.save()
+        
         return res.status(201).json({
             wine,
-        });
+        })
+        
+        
     } catch (error) {
         return res.status(500).json({ error: error.message })
     }

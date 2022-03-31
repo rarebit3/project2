@@ -22,7 +22,7 @@ const main = async () => {
       description: "",
       notes: "",
       image: "",
-      remaining: 0,
+      bottles: 1,
       cellar: myFirstCellar[0]._id
     },
     {
@@ -33,12 +33,12 @@ const main = async () => {
       subregion: `'Super Tuscan'`,
       tasted: true,
       glass: "Mason Jar",
-      pair: "conversation, mountain",
+      pair: "conversation, mountains",
       friends: "Mariel",
       description: "",
       notes: "",
       image: "",
-      remaining: 0,
+      bottles: 1,
       cellar: myFirstCellar[0]._id
     },
   ];

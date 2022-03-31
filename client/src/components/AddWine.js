@@ -5,7 +5,7 @@ import axios from "axios";
 const AddWine = () => {
   const [newWine, setNewWine] = useState({
     producer: "",
-    cuvee: "",
+    name: "",
     vintage: "",
     region: "",
     subregion: "",
@@ -16,20 +16,12 @@ const AddWine = () => {
 
   const formUpdate = (e) => {
     setNewWine({ ...newWine, [e.target.name]: e.target.value });
+    console.log(newWine)
   };
 
   const handleSubmit = async (event) => {
-    event.preventdefault()
-    // const wineForm = {
-    //   producer: newWine.producer,
-    //   cuvee: newWine.cuvee,
-    //   vintage: newWine.vintage,
-    //   region: newWine.region,
-    //   subr: newWine.subr,
-    //   bottles: newWine.bottles,
-    //   tasted: false,
-    //   cellar: "62432ae75fde428917faea09"
-    // }
+    event.preventDefault()
+
     await axios.post('http://localhost:3001/newwine', newWine)
   };
 
@@ -46,9 +38,9 @@ const AddWine = () => {
         />
         <input
           type="text"
-          value={newWine.cuvee}
+          value={newWine.name}
           onChange={formUpdate}
-          name={"cuvee"}
+          name={"name"}
           placeholder={"Cuvee or Name"}
         />
         <input
@@ -81,7 +73,7 @@ const AddWine = () => {
         />
         <button>Submit</button>
       </form>
-      {/* <button onClick={console.log(setNewWine)}>whats the data</button> */}
+      <button onClick={console.log()}>whats the data</button>
     </div>
   );
 };
