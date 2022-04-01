@@ -2,7 +2,7 @@ const Cellar = require("../models/cellar");
 const Wine = require("../models/wine");
 const Spirit = require("../models/spirit");
 const User = require("../models/user");
-// const UserInfo = require('../models/userinfo');
+
 
 const getAllWines = async (req, res) => {
   try {
@@ -53,17 +53,11 @@ const updateWine = async (req, res) => {
 };
 
 const removeWine = async (req, res) => {
-//   try {
-//     const { id } = req.params;
-//     const wine = await Wine.findByIdAndDelete(body.id, body);
-//   } catch (error) {
-//     return res.status(500).send(error.message);
-//   }
-try{
-    res.status(200).json(await Wine.findByIdAndDelete(req.params.id))
-} catch (error) {
-    return res.status(500).json({ error: error.message })
-}
+  try {
+    res.status(200).json(await Wine.findByIdAndDelete(req.params.id));
+  } catch (error) {
+    return res.status(500).json({ error: error.message });
+  }
 };
 
 //Below not used yet

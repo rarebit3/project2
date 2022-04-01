@@ -1,0 +1,52 @@
+.wine-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(17, 117, 115, 1);
+    border-radius: 0.8em;
+    margin: 1em;
+    justify-content: space-around;
+    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.5);
+    color: rgba(58, 8, 9, 1);
+    /* cursor: pointer; */
+    max-width: 45vw;
+  }
+  
+  .wine-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .remove-button {
+    margin: 1em 0 0 0;
+  }
+
+  .inventory {
+    display: flex;
+    flex-direction: row;     
+}
+
+  .in-box-button {
+    background-color: rgba(117, 17, 19, 1);
+    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    border-radius: .5em;
+    border-width: .3em;
+    text-decoration: none;
+    padding: 0.2rem .2rem;
+  }
+
+  .in-box-button:hover {
+      background-color: rgba(58, 8, 9, 1);
+      border-radius: 4px;
+      transition: all 0.2s ease-out;
+  }
+
+  .drink-bottle {
+      align-items: flex-end;
+  }
+

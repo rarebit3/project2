@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 const AddWine = () => {
+  let navigate = useNavigate()
+
   const [newWine, setNewWine] = useState({
     producer: "",
     name: "",
@@ -21,6 +24,7 @@ const AddWine = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     await axios.post('http://localhost:3001/newwine', newWine)
+    navigate('/cellar')
   };
 
   return (

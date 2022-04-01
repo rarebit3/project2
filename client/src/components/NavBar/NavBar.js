@@ -24,10 +24,6 @@ const Navbar = () => {
         <Link className="iLinks" to="/cellar">
           My Cellar
         </Link>
-        <Link className="iLinks" to="/mywines">My Wines</Link>
-        <p className="iLinks" onClick={() => navigate(-1)}>
-          Back
-        </p>
         <Link className="iLinks login" to="/login">
           Log In
         </Link>
