@@ -50,3 +50,17 @@
       align-items: flex-end;
   }
 
+  .addwine {
+    background-color: rgba(17, 117, 115, 1);
+    color: whitesmoke;    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: .3em;
+    margin: 1em;
+    padding: 1em;
+  }
+
+  .addwine:hover {
+    background-color: rgba(8, 58, 57, 1);
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+  }

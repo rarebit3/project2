@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./AddWine.css";
 
 
 const AddWine = () => {
@@ -30,7 +31,7 @@ const AddWine = () => {
   return (
     <div>
       <h1 className="bodytitle">Add wine to the cellar.</h1>
-      <form  onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <input
           type="text"
           value={newWine.producer}

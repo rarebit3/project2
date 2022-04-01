@@ -40,7 +40,7 @@ const Cellar = () => {
   } else {
     return (
       <div className="wine-grid">
-        <Link className="" to="/addwine">Add Wine</Link>
+        <Link className="addwine" to="/addwine">Add Wine</Link>
         {positiveBottles.map((wine, id) => (
           <div className="wine-card" key={id}>
             <h2>
@@ -81,7 +81,7 @@ const Cellar = () => {
             </button>
           </div>
         ))}
-        <Link className="" to="/addwine">Add Wine</Link>
+        <Link className="addwine" to="/addwine">Add Wine</Link>
       </div>
     );
   }
