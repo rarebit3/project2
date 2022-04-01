@@ -49,11 +49,19 @@
 
 #### ***References***
 [Trello](https://trello.com/b/kBzgQtmI/p2-wine-cellar)    
-
-### 
+*** 
 [ERD](https://lucid.app/lucidchart/12d6a6be-c6d5-427a-b971-bad62a343494/edit?invitationId=inv_8b393d44-1475-4d38-bcc7-896248f087de)
-
-[Wireframe](https://www.figma.com/file/qXUumOnde5vpMNbBv41MvU/P2---Wine-Cellar?node-id=2%3A40)
-***Future Updates***
 ***
+[Wireframe](https://www.figma.com/file/qXUumOnde5vpMNbBv41MvU/P2---Wine-Cellar?node-id=2%3A40)
+***
+***Future Updates***
+- Contact me page
+- prompt a review when a bottle changes from unopened to tasted
+- update any input section
+- track tastings at different aging states
+- add a rating section
+- bottle/case pricing
+- users functionality
+    - passwords and multiple users
+- multiple cellars functionality
 ### ***Credits***
