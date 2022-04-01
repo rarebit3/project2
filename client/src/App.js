@@ -7,6 +7,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home'
 import Cellar from './components/Cellar'
 import AddWine from './components/AddWine';
+import MyWines from './components/MyWines';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path='/' element={ <Home />} />
           <Route path='/addwine' element={ <AddWine />} />
           <Route path='/cellar' element={ <Cellar />} />
+          <Route path='/mywines' element={ <MyWines />} />
           {/* <Route path='/' element={ <Login />} /> */}
         </Routes>
       </main>
