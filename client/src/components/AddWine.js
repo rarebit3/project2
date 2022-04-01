@@ -14,6 +14,7 @@ const AddWine = () => {
     region: "",
     subregion: "",
     bottles: "",
+    description: "",
     tasted: false,
     cellar: "62432ae75fde428917faea09"
   });
@@ -29,8 +30,8 @@ const AddWine = () => {
   };
 
   return (
-    <div>
-      <h1 className="bodytitle">Add wine to the cellar.</h1>
+    <div className="form-box">
+      <h1 className="form-title">Add wine to the cellar.</h1>
       <form className="form" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -74,7 +75,14 @@ const AddWine = () => {
           name={"bottles"}
           placeholder={"How many bottles are you adding?"}
         />
-        <button>Submit</button>
+          <textarea
+          type="text"
+          value={newWine.description}
+          onChange={formUpdate}
+          name={"description"}
+          placeholder={"Description of the wine you added."}
+        />
+        <button className="btn">Submit</button>
       </form>
     </div>
   );
