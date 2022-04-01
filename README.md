@@ -18,23 +18,21 @@
 ***
 ### ***Front End***
 #### Trevor Bond
-- [] Landing page
-    - [] Nav
-- [] Wine entry form
-- [] Spirit entry form
-- [] My Cellar
-    - [] open a bottle (decrement bottle count)
+- [x] Landing page
+    - [x] Nav
+- [x] Wine entry form
+- [x] My Cellar
+    - [x] open a bottle (decrement bottle count)
         - [] prompt reiew
-    - [] spirits
     - [] wine
 ### ***Back End***
-- [] Add Wine Bottle
-    - [] Winery/producer
-    - [] cuvee / name
-    - [] Vintage (if applicable)
-    - [] Region 
-        - [] subregion
-    - [] Desription / extra details
+- [x] Add Wine Bottle
+    - [x] Winery/producer
+    - [x] cuvee / name
+    - [x] Vintage (if applicable)
+    - [x] Region 
+        - [x] subregion
+    - [x] Desription / extra details
     - [?] image upload
 - [] Add Spirit
     - [] Producer
