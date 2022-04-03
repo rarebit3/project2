@@ -3,7 +3,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Navbar from "./components/Navbar/Navbar";
+import NavBar from "./components/NavBar/NavBar.js";
 import Home from "./components/Home";
 import Cellar from "./components/Cellar";
 import AddWine from "./components/AddWine";
@@ -11,7 +11,7 @@ import AddWine from "./components/AddWine";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <NavBar />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />

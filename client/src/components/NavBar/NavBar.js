@@ -1,14 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./Navbar.css";
+import "./NavBar.css";
 
-const Navbar = () => {
+const NavBar = () => {
   let navigate = useNavigate();
   const [clicked, setClicked] = useState(false);
 
   return (
-    <nav className="Navbar">
+    <nav className="NavBar">
       <h1 className="cellar-icon" onClick={() => navigate("/")}>
         Cellar<i className="fa-solid fa-wine-bottle"></i>
       </h1>
@@ -32,4 +32,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
