@@ -11,7 +11,7 @@ const Cellar = () => {
   const [wines, setWines] = useState([]);
 
   const getWines = async () => {
-    const wineList = await axios.get("http://localhost:3001/wines");
+    const wineList = await axios.get("/wines");
     setWines(wineList.data.wines);
   };
   useEffect(() => {
@@ -26,12 +26,12 @@ const Cellar = () => {
     wine.tasted = true;
     wine.bottles -= 1;
     console.log(wine);
-    await axios.post("http://localhost:3001/updatewine", wine);
+    await axios.post("/updatewine", wine);
     navigate("/cellar");
   };
 
   const removeWine = async (wine) => {
-    await axios.delete(`http://localhost:3001/removewine/${wine._id}`);
+    await axios.delete(`/removewine/${wine._id}`);
     getWines();
   };
 

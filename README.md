@@ -24,7 +24,6 @@
 - [x] My Cellar
     - [x] open a bottle (decrement bottle count)
         - [] prompt reiew
-    - [] wine
 ### ***Back End***
 - [x] Add Wine Bottle
     - [x] Winery/producer
@@ -34,18 +33,8 @@
         - [x] subregion
     - [x] Desription / extra details
     - [?] image upload
-- [] Add Spirit
-    - [] Producer
-    - [] Name
-        - [] subname
-    - [] Age Statement (if applicable)
-    - [?] image upload
-- [] Once opened
-    - [] tasting notes
-    (all below optional. hide if empty string)
-    - [] glassware
-    - [] pairings
-    - [] guests
+
+- [x] CRUD!
 
 #### ***References***
 [Trello](https://trello.com/b/kBzgQtmI/p2-wine-cellar)    
@@ -57,6 +46,7 @@
 ***Future Updates***
 - Contact me page
 - prompt a review when a bottle changes from unopened to tasted
+- 
 - update any input section
 - track tastings at different aging states
 - add a rating section

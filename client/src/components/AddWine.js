@@ -25,7 +25,7 @@ const AddWine = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await axios.post('http://localhost:3001/newwine', newWine)
+    await axios.post('/newwine', newWine)
     navigate('/cellar')
   };
 
