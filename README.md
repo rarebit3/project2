@@ -23,7 +23,6 @@
 - [x] Wine entry form
 - [x] My Cellar
     - [x] open a bottle (decrement bottle count)
-        - [] prompt reiew
 ### ***Back End***
 - [x] Add Wine Bottle
     - [x] Winery/producer
@@ -32,10 +31,11 @@
     - [x] Region 
         - [x] subregion
     - [x] Desription / extra details
-    - [?] image upload
-
-- [x] CRUD!
-
+- [x] CRUD
+    -[x] Create a wine
+    -[x] Display wines
+    -[x] Update bottle count
+    -[x] Delete a bottle from inventory
 #### ***References***
 [Trello](https://trello.com/b/kBzgQtmI/p2-wine-cellar)    
 *** 
@@ -43,10 +43,11 @@
 ***
 [Wireframe](https://www.figma.com/file/qXUumOnde5vpMNbBv41MvU/P2---Wine-Cellar?node-id=2%3A40)
 ***
+[Heroku Deployment](https://winecellartb.herokuapp.com/app)
+***
 ***Future Updates***
 - Contact me page
-- prompt a review when a bottle changes from unopened to tasted
-- 
+- prompt a review when a bottle changes from unopened to tasted 
 - update any input section
 - track tastings at different aging states
 - add a rating section
